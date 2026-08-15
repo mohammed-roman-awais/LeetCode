@@ -20,11 +20,9 @@ class Solution {
                         dp[i][j] += dp[i - 1][j + 1];
                     }
                     int extra = 0;
-                    // Extra palindrome from s
                     if (i + 1 < m) {
                         extra = Math.max(extra, palS[i + 1]);
                     }
-                    // Extra palindrome from t
                     if (j > 0) {
                         extra = Math.max(extra, palT[j - 1]);
                     }
